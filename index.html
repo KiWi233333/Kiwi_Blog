@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KIWI 博客</title>
+    <link rel="icon" href="./public/image/icon/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap5 CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/animate.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./public/css/default.css">
+    <link rel="stylesheet" href="./public/css/index.css">
+</head>
+
+
+<body id="all-top" class="containers">
+    <!-- 顶部导航条 -->
+    <nav class="navbar navbar-expand-lg py-1 py-md-3">
+        <div class="container banner">
+            <a href="" class="navbar-brand flex-center-center">
+                <img src="./public/image/icon/favicon.ico" class="h-100">
+            </a>
+            <button class="navbar-toggler nav-toggle-btn" data-toggle="collapse" data-bs-toggle="collapse"
+                data-bs-target="#nav-menu">
+                <div class="bar">
+                    <input id="check" type="checkbox">
+                    <div class="tmb">
+                        <span class="top"></span>
+                        <span class="middle"></span>
+                        <span class="bottom"></span>
+                    </div>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="nav-menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="item p-2 pe-4">
+                        <a href="#all-top" class="active">首 页</a>
+                    </li>
+                    <li class="item item2 p-2 pe-4" style="position: relative;">
+                        <a href="#content2">文 章</a>
+                        <!-- 文章列表 -->
+                        <ul class="second-nav" style="position: absolute;top: 2.5em;">
+                            <li><a href="./src/aticledetail1.html">Javascript</a></li>
+                            <li><a href="./src/aticledetail2.html">Axios学习</a></li>
+                            <li><a href="./src/aticledetail3.html">Vue3.0</a></li>
+                            <li><a href="./src/aticledetail4.html">node.js</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="item p-2 pe-4">
+                        <a href="#content3">部 件</a>
+                    </li>
+
+                    <li class="item p-2 pe-4">
+                        <a href="#content4">文 档</a>
+                    </li>
+                    <li class="item p-2 pe-4">
+                        <a href="#content5">关 于</a>
+                    </li>
+                    <!-- 4、主题换切换 -->
+                    <li class=" item p-2 pe-3 theme-change">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input change-switch " type="checkbox">
+                            <label class="form-check-label 	d-none d-md-inline " for="mySwitch">夜间模式</label>
+                            <!-- <label class="form-check-label 	d-inline d-md-none " for="mySwitch">夜间</label> -->
+                            <svg t="1670735991770" class="icon d-none d-md-inline " viewBox="0 0 1024 1024"
+                                version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6696" width="18" height="18">
+                                <path
+                                    d="M405.828267 86.528c-187.733333 50.619733-320.512 221.201067-320.512 418.321067 0 239.5648 194.218667 433.834667 433.749333 433.834666 197.256533 0 367.872-133.0688 418.423467-321.194666 8.055467-30.0032-24.8832-54.289067-51.165867-37.7344a318.856533 318.856533 0 0 1-170.632533 49.493333c-177.493333 0-321.3824-143.872-321.3824-321.2288 0-60.928 17.271467-119.364267 49.322666-170.3936 16.503467-26.299733-7.816533-59.204267-37.802666-51.114667z m-58.965334 96.256l-0.494933 1.416533a385.877333 385.877333 0 0 0-20.3264 123.818667c0 215.074133 174.455467 389.4784 389.632 389.4784l8.533333-0.085333c39.765333-0.8704 78.626133-7.816533 115.541334-20.309334l1.536-0.580266-2.5088 4.7104C775.953067 795.357867 655.0016 870.4 519.0656 870.4 317.2352 870.4 153.6 706.730667 153.6 504.849067c0-137.642667 76.868267-259.9424 193.262933-322.082134z"
+                                    p-id="6697"></path>
+                                <path
+                                    d="M898.304 147.1488a45.653333 45.653333 0 0 1-13.9776 50.653867l-156.7232 128.938666H904.533333v68.266667H664.507733a45.653333 45.653333 0 0 1-29.013333-80.896l156.757333-128.955733h-159.863466v-68.266667h222.941866c19.285333 0 36.471467 12.117333 42.973867 30.2592z"
+                                    fill="#73ffa0" p-id="6698"></path>
+                            </svg>
+                        </div>
+                    </li>
+                    <!-- 5、登录 -->
+                    <li class="item p-2 pe-4 login">
+                        <a href="./src/login.html">
+                            <span>登 录</span>
+                            <svg t="1670690207202" class="icon d-none d-md-inline " viewBox="0 0 1024 1024"
+                                version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2745" width="32" height="32">
+                                <path
+                                    d="M512 531.4c79.9 0 144.9-65 144.9-144.9s-65-144.9-144.9-144.9-144.9 65-144.9 144.9 65 144.9 144.9 144.9z m0-239.1c52 0 94.3 42.3 94.3 94.3S564 480.8 512 480.8s-94.3-42.3-94.3-94.3 42.3-94.2 94.3-94.2z"
+                                    p-id="2746"></path>
+                                <path
+                                    d="M896 512c0-211.7-172.3-384-384-384S128 300.3 128 512c0 83.3 27.3 164.5 77.1 230.8l-0.2 0.4 11.4 13.7 23 27.7 0.9-1.5C311.9 855.2 409.2 896 512 896c102.8 0 200.1-40.8 271.9-112.9l0.9 1.5 23-27.7 11.4-13.7-0.2-0.4c49.7-66.3 77-147.5 77-230.8zM512 178.6c183.8 0 333.4 149.6 333.4 333.4 0 66-19.7 130.5-56 184.9-1-1.4-2.1-2.7-3.1-4-0.8-1-1.6-2.1-2.4-3.1-1.6-2-3.3-4.1-4.9-6.1-0.6-0.8-1.2-1.5-1.9-2.3-2.3-2.7-4.7-5.4-7-8.1-0.4-0.5-0.9-0.9-1.3-1.4-2-2.2-4-4.3-6-6.4-0.9-0.9-1.8-1.8-2.6-2.7-1.6-1.6-3.2-3.3-4.9-4.9-1-1-2-2-3.1-3-1.5-1.5-3.1-3-4.7-4.4l-3.3-3c-1.6-1.4-3.1-2.8-4.7-4.2-1.1-1-2.3-2-3.4-2.9-1.6-1.3-3.2-2.7-4.8-4-1.1-0.9-2.3-1.9-3.4-2.8-1.7-1.3-3.3-2.6-5-3.9-1.1-0.9-2.2-1.7-3.4-2.6-1.8-1.4-3.6-2.7-5.5-4-1-0.8-2.1-1.5-3.1-2.3-2.2-1.5-4.4-3.1-6.7-4.5-0.7-0.5-1.4-1-2.1-1.4-3-1.9-5.9-3.8-8.9-5.7-0.8-0.5-1.5-0.9-2.3-1.4-2.3-1.4-4.5-2.7-6.8-4-1.1-0.6-2.3-1.3-3.4-1.9-2-1.1-3.9-2.2-5.9-3.2-1.3-0.7-2.5-1.3-3.8-2-1.9-1-3.8-1.9-5.7-2.9-1.3-0.7-2.6-1.3-4-1.9l-5.7-2.7c-1.3-0.6-2.7-1.2-4.1-1.8-1.9-0.8-3.8-1.7-5.8-2.5-1.3-0.6-2.7-1.1-4-1.7l-6-2.4-3.9-1.5-6.6-2.4c-1.1-0.4-2.3-0.8-3.4-1.2-2.9-1-5.7-1.9-8.6-2.8-0.5-0.2-1-0.3-1.5-0.5-3.4-1-6.8-2-10.2-2.9-1-0.3-2-0.5-3-0.8-2.4-0.6-4.9-1.3-7.3-1.8l-3.9-0.9c-2.2-0.5-4.3-1-6.5-1.4-1.4-0.3-2.9-0.6-4.3-0.8l-6.3-1.2c-1.5-0.3-3-0.5-4.4-0.7-2.1-0.3-4.1-0.6-6.2-0.9l-4.5-0.6c-2.1-0.3-4.2-0.5-6.3-0.7-1.5-0.2-2.9-0.3-4.4-0.5-2.2-0.2-4.4-0.4-6.6-0.5l-4.2-0.3c-2.4-0.2-4.8-0.3-7.2-0.4-1.2-0.1-2.4-0.1-3.6-0.2-3.6-0.1-7.2-0.2-10.8-0.2-3.6 0-7.2 0.1-10.8 0.2-1.2 0-2.4 0.1-3.6 0.2-2.4 0.1-4.8 0.2-7.2 0.4l-4.2 0.3c-2.2 0.2-4.4 0.3-6.6 0.5-1.5 0.1-2.9 0.3-4.4 0.5-2.1 0.2-4.2 0.5-6.3 0.7l-4.5 0.6c-2.1 0.3-4.2 0.6-6.2 0.9-1.5 0.2-3 0.5-4.4 0.7l-6.3 1.2c-1.4 0.3-2.8 0.5-4.3 0.8-2.2 0.4-4.4 0.9-6.5 1.4l-3.9 0.9c-2.5 0.6-4.9 1.2-7.3 1.8-1 0.3-2 0.5-3 0.8-3.4 0.9-6.8 1.9-10.2 2.9-0.5 0.1-1 0.3-1.4 0.5-2.9 0.9-5.8 1.8-8.7 2.8-1.1 0.4-2.3 0.8-3.4 1.2-2.2 0.8-4.4 1.5-6.6 2.4l-3.9 1.5-6 2.4c-1.3 0.5-2.7 1.1-4 1.7-1.9 0.8-3.9 1.6-5.8 2.5-1.3 0.6-2.7 1.2-4 1.8l-5.7 2.7c-1.3 0.6-2.6 1.3-3.9 1.9-1.9 0.9-3.8 1.9-5.7 2.9-1.2 0.6-2.5 1.3-3.7 2-2 1.1-4 2.2-5.9 3.3-1.1 0.6-2.2 1.2-3.3 1.9-2.3 1.3-4.6 2.7-6.9 4.1-0.7 0.4-1.5 0.9-2.2 1.3l-9 5.7c-0.7 0.4-1.3 0.9-2 1.4-2.3 1.5-4.5 3-6.8 4.6-1 0.7-2.1 1.5-3.1 2.2-1.8 1.3-3.7 2.7-5.5 4-1.1 0.8-2.2 1.7-3.4 2.6-1.7 1.3-3.4 2.6-5.1 4-1.1 0.9-2.3 1.8-3.4 2.8-1.6 1.3-3.2 2.7-4.9 4-1.1 1-2.2 1.9-3.3 2.9-1.6 1.4-3.2 2.8-4.7 4.2-1.1 1-2.2 2-3.2 2.9-1.6 1.5-3.2 3-4.7 4.5-1 1-2 1.9-3 2.9-1.7 1.6-3.3 3.3-4.9 5l-2.6 2.6c-2.1 2.2-4.1 4.3-6.1 6.6-0.4 0.4-0.8 0.9-1.2 1.3-2.4 2.7-4.7 5.4-7.1 8.1-0.6 0.7-1.2 1.5-1.8 2.2-1.7 2-3.4 4.1-5 6.2-0.8 1-1.6 2-2.4 3.1-1.1 1.4-2.1 2.7-3.2 4.1-36.3-54.5-56-119-56-184.9-0.2-184.1 149.4-333.7 333.2-333.7z m-18 666.3c-2-0.1-3.9-0.3-5.9-0.5-4-0.3-8-0.6-12-1-2.3-0.3-4.7-0.6-7-0.9-3.6-0.5-7.1-0.9-10.7-1.5-2.5-0.4-4.9-0.9-7.4-1.4-3.4-0.6-6.7-1.2-10.1-2-2.5-0.5-5-1.2-7.5-1.8-3.2-0.8-6.5-1.6-9.7-2.5-2.5-0.7-5-1.4-7.5-2.2-3.2-0.9-6.3-1.9-9.5-3-2.5-0.8-4.9-1.7-7.4-2.6-3.1-1.1-6.2-2.2-9.2-3.4-2.4-1-4.9-2-7.3-3l-9-3.9c-2.4-1.1-4.7-2.2-7.1-3.3-3-1.4-5.9-2.9-8.8-4.4-2.3-1.2-4.6-2.4-6.9-3.7-2.9-1.6-5.8-3.3-8.6-5-2.2-1.3-4.4-2.6-6.6-4-2.9-1.8-5.7-3.7-8.5-5.5-2.1-1.4-4.2-2.8-6.2-4.2-2.9-2-5.6-4.1-8.4-6.2-1.9-1.4-3.9-2.9-5.8-4.4-2.9-2.3-5.7-4.6-8.5-7-1.7-1.5-3.5-2.9-5.2-4.4-3-2.6-6-5.4-8.9-8.1-1.4-1.3-2.9-2.6-4.3-4-3.7-3.6-7.4-7.4-11-11.2-0.5-0.6-1.1-1.1-1.6-1.6l-0.2-0.2c0.1-0.2 0.2-0.4 0.4-0.6 0.7-1.1 1.5-2.1 2.2-3.1 1.1-1.5 2.1-3.1 3.2-4.6 0.8-1.1 1.6-2.1 2.4-3.2 1.1-1.4 2.2-2.9 3.3-4.3 0.8-1.1 1.7-2.1 2.5-3.2 1.1-1.4 2.2-2.8 3.3-4.1 0.9-1.1 1.8-2.1 2.7-3.1 1.1-1.3 2.3-2.6 3.4-3.9 0.9-1 1.8-2.1 2.8-3.1 1.2-1.3 2.3-2.6 3.5-3.8 0.9-1 1.9-2 2.9-3 1.2-1.2 2.4-2.5 3.7-3.7 1-1 2-1.9 2.9-2.9 1.3-1.2 2.5-2.4 3.8-3.6 1-0.9 2-1.8 3-2.8 1.3-1.2 2.6-2.3 3.9-3.5 1-0.9 2-1.8 3-2.6 1.3-1.1 2.7-2.3 4.1-3.4 1-0.8 2-1.7 3.1-2.5 1.4-1.1 2.8-2.2 4.3-3.3 1-0.8 2-1.6 3.1-2.3l4.5-3.3 3-2.1c1.6-1.1 3.3-2.3 4.9-3.4l2.7-1.8c1.9-1.3 3.9-2.5 5.9-3.7 0.6-0.4 1.3-0.8 1.9-1.2 5.3-3.2 10.6-6.3 16.1-9.2 0.8-0.4 1.6-0.8 2.4-1.3 1.9-1 3.8-2 5.8-3 1-0.5 2-1 3.1-1.5 1.8-0.8 3.5-1.7 5.3-2.5 1.1-0.5 2.3-1 3.4-1.5 1.7-0.7 3.4-1.5 5-2.2l3.6-1.5c1.7-0.7 3.3-1.3 5-2 1.2-0.5 2.5-0.9 3.8-1.4 1.6-0.6 3.3-1.2 5-1.8 1.3-0.4 2.6-0.9 3.8-1.3 1.6-0.5 3.3-1.1 5-1.6l3.9-1.2c1.6-0.5 3.3-1 5-1.4 1.3-0.4 2.7-0.7 4-1.1 1.7-0.4 3.3-0.9 5-1.3 1.3-0.3 2.7-0.7 4-1 1.7-0.4 3.4-0.7 5-1.1 1.4-0.3 2.7-0.6 4.1-0.8l5.1-0.9c1.4-0.2 2.7-0.5 4.1-0.7 1.7-0.3 3.5-0.5 5.2-0.8 1.3-0.2 2.7-0.4 4-0.6l5.4-0.6c1.3-0.1 2.6-0.3 3.9-0.4 1.9-0.2 3.8-0.3 5.7-0.5 1.2-0.1 2.5-0.2 3.7-0.3l6.3-0.3c1.1 0 2.1-0.1 3.1-0.1 3.1-0.1 6.3-0.2 9.4-0.2 3.2 0 6.3 0.1 9.4 0.2 1.1 0 2.1 0.1 3.2 0.1l6.3 0.3c1.2 0.1 2.5 0.2 3.7 0.3 1.9 0.1 3.8 0.3 5.7 0.5 1.3 0.1 2.6 0.3 3.9 0.4l5.4 0.6c1.3 0.2 2.7 0.4 4 0.6 1.7 0.3 3.5 0.5 5.2 0.8 1.4 0.2 2.7 0.5 4.1 0.7l5.1 0.9c1.4 0.3 2.7 0.6 4.1 0.8 1.7 0.4 3.4 0.7 5 1.1 1.4 0.3 2.7 0.6 4.1 1 1.7 0.4 3.3 0.8 5 1.3 1.3 0.4 2.7 0.7 4 1.1 1.7 0.5 3.3 0.9 5 1.4l3.9 1.2c1.7 0.5 3.3 1.1 5 1.6 1.3 0.4 2.6 0.9 3.9 1.3 1.7 0.6 3.3 1.2 4.9 1.8 1.3 0.5 2.5 0.9 3.8 1.4 1.7 0.6 3.3 1.3 5 2l3.6 1.5c1.7 0.7 3.4 1.4 5 2.2 1.1 0.5 2.3 1 3.4 1.5 1.8 0.8 3.5 1.6 5.3 2.5 1 0.5 2.1 1 3.1 1.5 1.9 1 3.9 2 5.8 3 0.8 0.4 1.6 0.8 2.4 1.3 5.5 2.9 10.8 6 16.1 9.2 0.6 0.4 1.3 0.8 1.9 1.2 2 1.2 3.9 2.5 5.9 3.7l2.7 1.8c1.7 1.1 3.3 2.2 5 3.4 1 0.7 2 1.4 2.9 2.1l4.5 3.3c1 0.8 2 1.5 3 2.3 1.4 1.1 2.9 2.2 4.3 3.3 1 0.8 2 1.7 3.1 2.5 1.4 1.1 2.7 2.3 4.1 3.4 1 0.9 2 1.7 3 2.6 1.3 1.2 2.6 2.3 4 3.5l3 2.7c1.3 1.2 2.6 2.4 3.8 3.6 1 0.9 1.9 1.9 2.9 2.9l3.7 3.7c0.9 1 1.9 2 2.8 2.9l3.6 3.9 2.7 3c1.2 1.3 2.3 2.7 3.5 4 0.9 1 1.8 2.1 2.6 3.1 1.1 1.4 2.3 2.8 3.4 4.2 0.8 1 1.7 2.1 2.5 3.1 1.1 1.4 2.2 2.9 3.3 4.4 0.8 1 1.6 2.1 2.3 3.1 1.1 1.5 2.2 3.1 3.3 4.7l2.1 3c0.1 0.2 0.3 0.4 0.4 0.6l-0.2 0.2c-0.5 0.6-1.1 1.1-1.6 1.7-3.6 3.8-7.2 7.6-10.9 11.2-1.4 1.4-3 2.7-4.4 4.1-2.9 2.7-5.8 5.4-8.7 8-1.8 1.6-3.6 3-5.4 4.5-2.7 2.3-5.5 4.6-8.3 6.8l-6 4.5c-2.7 2-5.4 4.1-8.2 6-2.1 1.5-4.3 2.9-6.5 4.4-2.7 1.8-5.5 3.6-8.3 5.4-2.3 1.4-4.5 2.8-6.8 4.1-2.8 1.6-5.6 3.3-8.4 4.8-2.3 1.3-4.7 2.5-7.1 3.8-2.8 1.5-5.7 2.9-8.6 4.3-2.4 1.2-4.9 2.3-7.3 3.4-2.9 1.3-5.8 2.6-8.8 3.8-2.5 1-5 2.1-7.5 3-3 1.2-6 2.3-9 3.4-2.5 0.9-5 1.8-7.6 2.6-3.1 1-6.2 2-9.2 2.9-2.6 0.8-5.1 1.5-7.7 2.2-3.2 0.9-6.4 1.6-9.5 2.4-2.5 0.6-5.1 1.3-7.6 1.8-3.3 0.7-6.6 1.3-10 1.9-2.5 0.5-5 1-7.5 1.4-3.5 0.6-7 1-10.6 1.5-2.4 0.3-4.7 0.7-7.1 0.9-4 0.4-7.9 0.7-11.9 1-2 0.1-4 0.4-6 0.5-6 0.3-12 0.5-18 0.5-5.8 0.5-11.9 0.3-17.8 0z"
+                                    fill="var(--theme-color2)" p-id="2747"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--1 自我介绍 -->
+    <div class="container content1 flex-center-center" id="content1">
+        <div class="row">
+            <div class="col-12 col-lg-6 ct1-left animatejs animate__fadeInDown">
+                <img class="w-80 w-md-100" src="./public/image/img/headImg.png" alt="">
+            </div>
+            <div class="col-lg-6 ct1-right pt-3 flex-center-center animatejs animate__fadeInDown">
+                <div class="w-80">
+                    <h1 class="p-mb-4">Hi，</h1>
+                    <h1 class="p-mb-4">我是 <mark1>KiWi233</mark1>.</h1>
+                    <h2 class="p-mb-4" style="opacity: 0.6;">This is my Blog.</h2>
+                </div>
+            </div>
+        </div>
+        <!-- Sroll -->
+        <div class="container col-12 flex-center-center " style="position: absolute;bottom: 1.5rem; ">
+            <a href="#content2" class="scrollTip ">
+                <svg t="1670729923057" class="icon animate__heartBeat scrollTip" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="3785" width="32" height="32">
+                    <path
+                        d="M511.3 349.1l395.44 392.72a32 32 0 0 0 45.1-45.41L533.7 281.14a32 32 0 0 0-45.25 0.16L76 696.57a32 32 0 1 0 45.41 45.1z"
+                        p-id="3786"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <!--2 文章 -->
+    <div class="container mt-4 contents content2 px-0" id="content2">
+        <h2 class="col-12 text-center headline">
+            <mark1>文 章</mark1>
+        </h2>
+        <h5 class="mx-5 mt-4 mt-md-4 mx-md-2">热门文章</h5>
+        <!-- 列表渲染 -->
+        <div class="animatejs animate__fadeIn" style="position: relative;">
+            <div class="row d-flex ct2-content letters" style="flex-wrap: nowrap;">
+            </div>
+            <!-- 控制器 -->
+            <div class="flex-center-center mt-md-4 dots">
+            </div>
+        </div>
+    </div>
+    <!--3 小游戏和小组件 -->
+    <div class="container mt-4 contents content3" id="content3">
+        <div class=" col-12 text-center headline">
+            <h2>
+                <mark3>游 戏 & 部 件</mark3>
+            </h2>
+        </div>
+        <!-- 时钟 -->
+        <div class="flex-center-center p-3 clock">
+            <span class="time">00:00:00</span>
+            <svg t="1671189991434" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                p-id="3038" width="42" height="42">
+                <path
+                    d="M549.2736 565.6576l184.32-100.1472a50.9952 50.9952 0 0 0 16.1792-70.4512 51.2 51.2 0 0 0-70.4512-16.384l-184.32 100.1472a50.9952 50.9952 0 0 0-16.384 70.4512 50.9952 50.9952 0 0 0 70.656 16.384z"
+                    fill="var(--text-mark-color)" p-id="3039"></path>
+                <path
+                    d="M512 0a512 512 0 1 0 512 512A512 512 0 0 0 512 0z m0 921.6a409.6 409.6 0 1 1 409.6-409.6 409.6 409.6 0 0 1-409.6 409.6z"
+                    p-id="3040"></path>
+                <path
+                    d="M344.4736 280.576a51.2 51.2 0 0 0-69.2224 75.3664l212.3776 204.8a51.2 51.2 0 1 0 69.2224-75.3664z"
+                    p-id="3041"></path>
+            </svg>
+        </div>
+        <div class="row flex-center-center">
+            <div class="col-12 col-lg-6 my-1 flex-center-center animatejs animate__fadeInLeft ct3-left left">
+                <img class="img-fluid" src="./public/image/img/ticktacktoe.png">
+            </div>
+            <div class="col-12 col-lg-6 mt-2 mt-md-2 pt-2 pt-md-2 flex-center-center flex-column animatejs animate__fadeInRight"
+                style="animation-duration: 2s;">
+                <div class="col-md-6 li-cards" style="letter-spacing: 0.1em;">
+                    <div class="bg"></div>
+                    <div class="py-1 px-3 my-3 cards cards1">
+                        <a href="./src/todo.html">
+                            <h2>
+                                <mark4>Kiwi Todo</mark4>
+                            </h2>
+                            <p>
+                                <strong>待办事项</strong>，记录你的计划
+                            </p>
+                        </a>
+                    </div>
+                    <div class="py-1 px-3 my-3 cards cards2">
+                        <a href="./src/ticktacktoe.html">
+                            <h2>
+                                <mark3>Ticktacktoe</mark3>
+                            </h2>
+                            <p>
+                                <strong>井字游戏</strong>，现场博弈
+                            </p>
+                        </a>
+                    </div>
+                    <div class="py-1 px-3 my-3 cards cards3">
+                        <a href="./src/snake.html">
+                            <h2>
+                                <mark2>Snake</mark2>
+                            </h2>
+                            <p>
+                                <strong>贪吃蛇</strong>，简单耐玩
+                            </p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--4 说明文档 -->
+    <div class="container mt-4 contents content4" id="content4">
+        <div class="col-12 text-center headline">
+            <h2>
+                <mark4>文 档</mark4>
+            </h2>
+        </div>
+        <div class="row pt-0 flex-center-center">
+            <div class="col-12 col-md-6 mt-5 ps-md-5  flex-center-center flex-column  animatejs animate__fadeInLeft"
+                style="animation-duration: 2s;">
+                <div style="letter-spacing: 0.4em;" class="text-center ct4-left">
+                    <h3>网站设计报告</h3>
+                    <img class="img-fuild doc-img" src="./public/image/img/doc.png" alt="">
+                    <div class="flex-center-center btns">
+                        <a class="toDocPage" href="./src/doc.html">
+                            <mark4>点击查看</mark4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 flex-center-center left ">
+                <img class="p-4 img-fluid animatejs animate__fadeInRight" src="./public/image/img/write_machine.png">
+            </div>
+        </div>
+    </div>
+    <!--5 关于 -->
+    <div class="container mt-4 contents content5 " id="content5">
+        <h2 class="col-12 text-center headline top-title">
+            <mark1>关 于</mark1>
+        </h2>
+        <div class="row pt-0">
+            <div class="col-12 mt-5 col-md-6 flex-center-center left ">
+                <img draggable="false" class="p-4 img-fluid animatejs animate__fadeInLeft"
+                    src="./public/image/img/node_pen.png">
+            </div>
+            <div class="col-12 col-md-6 mt-4 px-5 flex-center-center flex-column  animatejs animate__fadeInRight"
+                style="animation-duration: 2s;">
+                <div style="letter-spacing: 0.2em;">
+                    <h2>
+                        <mark1>Q</mark1>: 为什么有这个网站？
+                    </h2>
+                    <h6 style="opacity: 0.8;">
+                        <mark2>A</mark2>:
+                        把所了解的知识通过这些小案例，充分掌握知识，以及记录自己的一些学习情况，分享有用的学习文章，觉得实用就不要忘记收藏网址~
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <div class="footer mt-5 mb-0 animatejs animate__fadeIn">
+        <div class="container mb-0 py-3 mt-2">
+            <div class="col-12 text-center">
+                <h2>KiWi Blog</h2>
+            </div>
+            <div class="col-12 text-center">
+                <p>@ 版权归 <mark1>kiwi233</mark1> 所有</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 返回顶部 -->
+    <a class="backTopBtn" href="#all-top">
+        <svg t="1670729923057" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="3785" width="32" height="32">
+            <path
+                d="M511.3 349.1l395.44 392.72a32 32 0 0 0 45.1-45.41L533.7 281.14a32 32 0 0 0-45.25 0.16L76 696.57a32 32 0 1 0 45.41 45.1z"
+                p-id="3786"></path>
+        </svg>
+    </a>
+    <!-- JQ -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+    <!-- Bootsrap5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/default.js"></script>
+    <script src="./public/js/index.js"></script>
+</body>
+
+</html>

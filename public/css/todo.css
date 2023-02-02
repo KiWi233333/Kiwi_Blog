@@ -1,0 +1,241 @@
+/* 顶部 */
+.top {
+    position: relative;
+}
+
+.top .input {
+    border: 3px solid gray !important;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.5s;
+    outline: none;
+}
+
+
+
+.top .input:focus,
+.top .input:valid {
+    transition: all 0.5s;
+    border: 3px solid #85af3d !important;
+}
+
+/* 上抬提示 */
+.tip {
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    left: 10px;
+    /* 点击失效 */
+    pointer-events: none;
+    color: gray;
+    transition: all 0.5s;
+    user-select: none;
+    transform: scale(1);
+    font-weight: 600;
+}
+
+.top .input:focus~#tip,
+.top .input:valid~#tip {
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    transform: scale(1.4);
+    color: #85af3d;
+}
+
+
+.top .submit,
+.cancel {
+    border-radius: 26px;
+    transition: 0.2s ease-out;
+}
+
+
+/* 添加清空按钮 */
+.top .submit {
+    background-color: #2122c8;
+}
+
+.top .submit:active {
+    background-color: #3939fb;
+}
+
+.top .cancel {
+    background-color: #212529;
+}
+
+.top .cancel:active {
+    background-color: #6c6c6c;
+}
+
+.top .input {
+    border-radius: 26px;
+    border: 2px solid gray;
+}
+
+/* 标题 */
+.title {
+    font-weight: 700;
+}
+
+.cards {
+    border-radius: 16px;
+    animation: cardChange 0.5s linear;
+}
+
+
+/* 编辑内容区域 */
+.editText {
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    resize: none;
+    outline: none;
+    transition: all 0.4s;
+    /* color: var(--theme-color2); */
+    color: #212529;
+    font-weight: 600;
+    caret-color: var(--theme-color2);
+}
+
+.editText:focus {
+    font-size: 18px;
+}
+
+/* 滚动条框设置 */
+.editText::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(238, 238, 238, 0.8);
+    -webkit-border-radius: 3px;
+}
+
+.editText::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: #c3c3c3;
+}
+
+
+/* 编辑控件区域 */
+.control {
+    display: flex;
+    user-select: none;
+    width: 100%;
+    justify-content: space-between;
+    transition: 0.5s;
+    opacity: 0;
+
+}
+
+.item:hover .control {
+    opacity: 1;
+}
+
+.control span {
+    display: inline-flex;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    background-color: #212529;
+    border-radius: 50%;
+}
+
+.control>div {
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.control span svg {
+    margin: auto;
+    fill: #eee;
+    transition: 0.3s ease-in-out;
+}
+
+.control .done:hover svg {
+    fill: greenyellow;
+}
+
+.control .delete:hover svg {
+    opacity: 0.7;
+    transform: rotate(30deg);
+}
+
+.control .edit:hover svg {
+    fill: #a2a2a2;
+    transform: rotate(-15deg);
+}
+
+.control .backout:hover svg {
+    fill: #a2a2a2;
+    transform: rotate(45deg);
+}
+
+
+.control span {
+    transition: all 0.2s;
+}
+
+.control span:active {
+    transform: scale(0.9);
+}
+
+
+
+/* 主题切换按钮 */
+.change-switch {
+    cursor: pointer;
+    position: fixed;
+    top: min(4vw, 3rem);
+    right: 4vw;
+    transition: all 0.5s;
+    fill: var(--theme-color2);
+    z-index: 99;
+}
+
+.change-switch:hover {
+    transform: scale(1.15);
+}
+
+/* 返回按钮 */
+.backOut {
+    cursor: pointer;
+    position: fixed;
+    top: min(4vw, 3rem);
+    left: 4vw;
+    transition: 0.5s;
+    fill: var(--theme-color2);
+    z-index: 99;
+}
+
+.backOut:hover {
+    transform: scale(1.15);
+}
+
+.backOut:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--theme-color);
+}
+
+/* 完成和删除动画 */
+@keyframes cardChange {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

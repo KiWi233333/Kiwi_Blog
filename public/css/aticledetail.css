@@ -1,0 +1,121 @@
+/* 顶部 */
+.top-banner img {
+    width: 60%;
+    border-radius: min(1vw, 0.8rem);
+    box-shadow: 5px 5px 10px var(--box-shadow-color);
+}
+
+/* 顶部返回上一页 */
+.backOut {
+    position: fixed;
+    bottom: min(2vw, 2rem);
+    right: min(2vw, 2rem);
+    width: 3rem;
+    height: 3rem;
+    background-color: #8acc1c;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+.backOut .icon {
+    fill: var(--theme-color);
+    object-fit: contain;
+}
+
+.backOut:hover {
+    opacity: 0.9;
+    transform: scale(0.9);
+    background-color: var(--text-mark-color);
+}
+
+/* 主题切换按钮 */
+.change-switch {
+    cursor: pointer;
+    position: fixed;
+    top: min(2vw, 2rem);
+    right: min(2vw, 2rem);
+    transition: all 0.5s;
+    fill: var(--theme-color2);
+}
+
+.change-switch:hover {
+    transform: scale(1.15);
+}
+
+/* li */
+ul li {
+    list-style: outside;
+}
+
+/* 文本内容 */
+.article-content {
+    letter-spacing: 0.1vw;
+    font-weight: 600;
+}
+
+.article-content h1 {
+    margin: 1em 0;
+}
+
+.article-content h2 {
+    margin: 1em 0;
+    opacity: 0.95;
+}
+
+.article-content h3 {
+    margin: 0.6em 0;
+    opacity: 0.8;
+}
+
+/* 底部 */
+.authorBanner .cards {
+    overflow: hidden;
+    background-color: rgba(96, 96, 96, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: min(1.2vw, 1rem);
+}
+
+.authorBanner img {
+    width: max(6rem, 8vw);
+    object-fit: cover;
+    border-radius: min(1.2vw, 1rem);
+}
+
+.like-box .like {
+    position: relative;
+    width: max(4vw, 2rem);
+    height: max(4vw, 2rem);
+    cursor: pointer;
+}
+
+.like-box .like .icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    fill: gray;
+    transition: 0.4s;
+}
+
+.like-box .like input {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation-duration: 0.2s;
+}
+
+.like-box .like input:checked~.icon {
+    fill: #E5404F;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+}

@@ -1,0 +1,343 @@
+.containers {
+    overflow-x: hidden;
+}
+
+.contents {
+    overflow-x: hidden;
+    min-height: 90vh;
+}
+
+.contents .headline {
+    padding-top: 10vh;
+}
+
+.second-nav {
+    display: none;
+    transition: 0.5s;
+}
+
+.navbar-nav .item2 {
+    transition: 0.5s;
+}
+
+.navbar-nav .item2 .second-nav:hover,
+.navbar-nav .item2:hover .second-nav {
+    display: flex;
+    transition: 0.5s;
+    flex-direction: column;
+}
+
+/* 首页content1 */
+/* ct1左边 */
+.content1 {
+    position: relative;
+    height: 90vh;
+}
+
+.ct1-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 2s;
+}
+
+/* 头像 */
+.ct1-left img {
+    width: 60%;
+    object-fit: contain;
+    border-radius: 59% 41% 41% 59% / 46% 30% 70% 54%;
+    animation: border-transform 20s linear infinite;
+    border: 1px solid #eee;
+}
+
+/* ct1右边 */
+.ct1-right {
+    flex-direction: column;
+    animation-duration: 2s;
+}
+
+.ct1-right h1 {
+    width: 100%;
+    font-size: min(8vw, 4rem);
+}
+
+.ct1-right h1:nth-child(1) {
+    font-size: min(14vw, 5rem);
+}
+
+/* 滚动 */
+.scrollTip {
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    fill: var(--theme-color2);
+}
+
+.ct1-tipbg {
+    fill: var(--theme-color2);
+}
+
+/* 时钟 */
+.clock {
+    cursor: pointer;
+    margin: auto;
+    position: relative;
+}
+
+.clock span {
+    position: absolute;
+    opacity: 0;
+    transition: 0.4s;
+    font-size: 2em;
+}
+
+.clock .icon {
+    fill: var(--theme-color2);
+    transition: 0.4s;
+    margin: auto;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.clock:hover span {
+    opacity: 1;
+}
+
+.clock:hover .icon {
+    opacity: 0;
+}
+
+
+
+/* 关于content2 */
+.cols {
+    transition: 0.5s;
+}
+
+.cols:active {
+    transform: scale(1.05);
+}
+
+.ct2-content .cards {
+    z-index: 0;
+    background-color: var(--boder-color);
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+
+.ct2-content .cards .imgbox {
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    transition: 0.5s;
+}
+
+.ct2-content .cards img {
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.ct2-content .cards img:hover {
+    transform: scale(1.05);
+}
+
+.cols .cards .msg {
+    overflow: hidden;
+    max-height: 4.5em;
+    opacity: 0.8;
+}
+
+
+/* 轮播图 */
+.letters {
+    width: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+    cursor: grab;
+    user-select: none;
+}
+
+.letters .cols p {
+    font-size: min(2vw, 1em);
+    max-height: 3em;
+}
+
+.dots {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.dots .dot {
+    width: 2em;
+    aspect-ratio: 4/1;
+    background-color: #eee;
+    border-radius: 0.5em;
+    margin: 0 0.4em;
+    opacity: 0.8;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--text-mark-color);
+}
+
+
+/* content3 游 戏 & 部 件 */
+.content3 .row .ct3-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content3 .row .ct3-left img {
+    width: 50%;
+    opacity: 0.92;
+    object-fit: contain;
+    background-color: var(--boder-color);
+    box-shadow: 10px 10px 20px var(--boder-color), -10px -10px 20px var(--boder-color);
+    border-radius: 0.9rem;
+}
+
+/* 右侧卡片 */
+.li-cards {
+    background-size: contain;
+    position: relative;
+}
+
+.li-cards .bg {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    border-radius: 50%;
+    background: radial-gradient(63.62% 69.52% at 100% 0%, rgba(247, 214, 98, 0.8) 0%, rgba(247, 214, 98, 0.168) 52.08%, rgba(247, 214, 98, 0) 100%), linear-gradient(208.42deg, #F0422A 7.46%, rgba(240, 88, 42, 0.18) 42.58%, rgba(240, 101, 42, 0) 64.13%), radial-gradient(114.51% 122.83% at 0% -15.36%, #E74F6A 0%, rgba(231, 79, 106, 0.22) 66.72%, rgba(231, 79, 106, 0) 100%), linear-gradient(333.95deg, rgba(83, 208, 236, 0.85) -7.76%, rgba(83, 208, 236, 0.204) 19.67%, rgba(138, 137, 190, 0) 35.42%), radial-gradient(109.15% 148.57% at 4.46% 98.44%, #1B3180 0%, rgba(27, 49, 128, 0) 100%), linear-gradient(141.57deg, #4EADEB 19.08%, rgba(52, 174, 255, 0) 98.72%);
+    background-blend-mode: normal, normal, normal, normal, multiply, normal;
+    filter: blur(35px);
+}
+
+.li-cards .cards,
+.li-cards .cards::before {
+    cursor: pointer;
+    background-color: var(--boder-color);
+    border-radius: min(1vw, 0.6rem);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s;
+    position: relative;
+}
+
+.li-cards .cards::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+    background-color: var(--text-mark-color4);
+}
+
+.li-cards .cards2::before {
+    background-color: var(--text-mark-color3);
+}
+
+.li-cards .cards3::before {
+    background-color: var(--text-mark-color2);
+}
+
+.li-cards h2,
+.li-cards strong,
+.li-cards p {
+    transition: 0.6s;
+}
+
+.li-cards .cards:hover h2,
+.li-cards .cards:hover::before {
+    width: 100%;
+    color: #fff;
+}
+
+.li-cards .cards:hover p,
+.li-cards .cards:hover strong {
+    color: #fff;
+    opacity: 0.8;
+}
+
+/* 文档 */
+.ct4-left {
+    position: relative;
+}
+
+.ct4-left .btns {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+}
+
+.ct4-left .toDocPage {
+    color: #000;
+    z-index: 1;
+    font-weight: 600;
+    border-radius: 0.6em;
+    backdrop-filter: blur(10px);
+    background-color: var(--boder-color);
+    padding: 1rem 1.3rem;
+    overflow: hidden;
+}
+
+.ct4-left .toDocPage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: 0.5s;
+    backdrop-filter: blur(10px);
+    background-color: var(--text-mark-color4);
+}
+
+.ct4-left .toDocPage:hover::after {
+    width: 100%;
+}
+
+.ct4-left .toDocPage:hover {
+    color: #fff;
+}
+
+.ct4-left .doc-img {
+    width: 60%;
+    top: 0;
+    left: 0;
+    filter: blur(4px);
+    box-shadow: 10px 10px 20px var(--boder-color);
+    border-radius: 0.8rem;
+}
+
+/* 页脚 */
+.footer {
+    backdrop-filter: var(--text-mark-color);
+    border-top: 2px solid var(--boder-color);
+    backdrop-filter: blur(19px);
+}
+
+.footer h2 {
+    color: var(--theme-color2);
+}
+
+.footer p {
+    opacity: 0.7;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .second-nav {
+        display: none !important;
+    }
+}

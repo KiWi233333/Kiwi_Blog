@@ -1,0 +1,412 @@
+/* 主题色 */
+/* :root {
+    --theme-color: #1d1d1d;
+    --theme-color2: #fff;
+    --theme-font-color: #444444;
+    --text-mark-color: #8acc1c;
+    --font-family: Helvetica;
+    --boder-color: #555555;
+    --box-shadow-color: #000;
+    --text-mark-color2: #8d73ff;
+    --text-mark-color3: #ffbc0d;
+    --text-mark-color4: #dc284d;
+    --text-mark-color5: #444444;
+} */
+
+/* 白天 */
+:root {
+    --theme-color: #fff;
+    --theme-color2: #1d1d1d;
+    --text-mark-color: #73FFA0;
+    --font-family: Helvetica;
+    --theme-font-color: #444444;
+    --boder-color: #dfdfdf36;
+    --box-shadow-color: #eee;
+
+    --text-mark-color2: #7c51fb;
+    --text-mark-color3: #ffbc0d;
+    --text-mark-color4: #dc284d;
+    --text-mark-color5: #f1f1f1;
+}
+
+* {
+    color: var(--theme-color2);
+    box-sizing: border-box;
+    animation-duration: 1s;
+}
+
+/* 自定义复用类 */
+/* 常用类 */
+.flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animatejs {
+    animation-play-state: paused;
+    animation-duration: 1s;
+}
+
+.animateStart {
+    animation-play-state: running;
+}
+
+.slice-border-light {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    background-size: 100% 36%;
+    fill: var(--text-mark-color);
+}
+
+/* 初始化 */
+html,
+body {
+    scroll-behavior: smooth;
+    font-family: var(--font-family);
+    background-color: var(--theme-color);
+    transition: 0.3s;
+    transition-property: background-color;
+}
+
+a {
+    text-decoration: none;
+    color: var(--theme-color2);
+    transition: all 0.5s;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+    color: var(--text-mark-color);
+    transition: all 0.5s;
+}
+
+ul li {
+    list-style: none;
+}
+
+input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+input {
+    transition: 0.5s;
+}
+
+
+
+/* 导航栏 */
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-image: radial-gradient(transparent 1px, var(--theme-color) 1px);
+    background-size: 4px 4px;
+    backdrop-filter: saturate(50%) blur(10px);
+}
+
+/* 导航条 */
+#nav-menu .item {
+    text-align: right;
+    font-size: 1rem;
+    color: var(--theme-color2);
+}
+
+.nav-toggle-btn {
+    padding: 0;
+}
+
+.nav-toggle-btn:focus {
+    box-shadow: none;
+}
+
+.btn-close {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-close:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-collapse .item {
+    font-weight: 600;
+}
+
+.navbar .login .icon {
+    margin-top: -3px;
+    float: right;
+    fill: var(--theme-color2);
+}
+
+.navbar .item a {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 0% 36%;
+    background-position: 0% 100%;
+    cursor: pointer;
+}
+
+.navbar .item .active {
+    background-size: 100% 36%;
+    background-image: linear-gradient(var(--text-mark-color), var(--text-mark-color));
+    fill: var(--text-mark-color);
+}
+
+/* 主题换切换 */
+
+
+
+/* 画字特效 */
+mark1,
+mark2,
+mark3,
+mark4,
+mark5 {
+    background-color: transparent;
+    color: inherit;
+    background-image: linear-gradient(var(--text-mark-color), var(--text-mark-color));
+    background-repeat: no-repeat;
+    background-size: 0% 36%;
+    background-position: 0% 100%;
+}
+
+mark2 {
+    background-image: linear-gradient(var(--text-mark-color2), var(--text-mark-color2));
+}
+
+mark3 {
+    background-image: linear-gradient(var(--text-mark-color3), var(--text-mark-color3));
+}
+
+mark4 {
+    background-image: linear-gradient(var(--text-mark-color4), var(--text-mark-color4));
+}
+
+mark5 {
+    background-image: linear-gradient(var(--text-mark-color5), var(--text-mark-color5));
+}
+
+mark1.animate,
+mark2.animate,
+mark3.animate,
+mark4.animate,
+mark5.animate {
+    animation: 1s sliceHightLight ease-in-out forwards;
+}
+
+
+
+
+
+/* 返回顶部 */
+.backTopBtn {
+    position: fixed;
+    right: min(5vw, 2rem);
+    bottom: min(5vw, 2rem);
+    width: min(6vw, 1.5rem);
+    height: min(6vw, 1.5rem);
+    padding: min(1.8vw, 0.9rem);
+    box-sizing: content-box;
+    background-color: var(--theme-color2);
+    cursor: pointer;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+    display: flex;
+    z-index: 99;
+    /* 切换 */
+    opacity: 0;
+    transform: scale(0);
+}
+
+.backTopBtn:hover {
+    background-color: var(--text-mark-color);
+}
+
+.backTopBtn .icon {
+    width: min(8vw, 2rem);
+    height: min(8vw, 2rem);
+    fill: var(--theme-color);
+    transition: all 0.4s;
+}
+
+.backTopBtn:hover .icon {
+    fill: var(--theme-color2);
+}
+
+/* 主题切换部分 */
+.theme-change,
+.navbar-nav .item {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.change-switch:checked {
+    background-color: var(--text-mark-color);
+    border-color: var(--text-mark-color);
+}
+
+.change-switch:focus {
+    box-shadow: none;
+}
+
+.theme-change .icon {
+    fill: var(--theme-color2);
+}
+
+/* 鼠标跟随 */
+.mouseMoveTip {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    width: min(5vw, 2rem);
+    height: min(5vw, 2rem);
+    border-radius: 50%;
+    background-color: var(--theme-color2);
+    background-color: rgba(153, 153, 153, 0.45);
+    transition: all 0.1s linear;
+    filter: invert(1);
+    z-index: 999;
+}
+
+
+
+/* 汉堡折叠菜单 */
+.banner {
+    position: relative;
+}
+
+.bar {
+    transform: scale(0.6);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar .tmb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bar input {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.bar .tmb span {
+    display: block;
+    width: 40px;
+    height: 8px;
+    background-color: var(--theme-color2);
+    border-radius: 2px;
+    margin: 4px;
+    transition: 0.3s ease;
+}
+
+.bar input:checked~.tmb>.top {
+    transform-origin: 5px 5px;
+    width: 49px;
+    transform: rotate(45deg);
+}
+
+.bar input:checked~.tmb>.bottom {
+    transform-origin: 10px 5px;
+    width: 49px;
+    transform: rotate(-45deg);
+}
+
+.bar input:checked~.tmb>.middle {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+/* 滚动条框设置 */
+html::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--theme-color);
+    -webkit-border-radius: 3px;
+}
+
+/* 滚动框设置 */
+html::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background-color: var(--theme-color);
+}
+
+/* 弹窗警告 */
+.alertTop {
+    position: fixed;
+    flex-direction: column;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    user-select: none;
+}
+
+.alert {
+    animation-duration: 1s;
+    transition: 0.5s;
+}
+
+
+/* 背景颜色滑动 */
+@keyframes sliceHightLight {
+    to {
+        background-size: 100% 36%;
+    }
+}
+
+/* 变换边框 */
+@keyframes border-transform {
+
+    0%,
+    100% {
+        border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+    }
+
+    14% {
+        border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+    }
+
+    28% {
+        border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+    }
+
+    42% {
+        border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+    }
+
+    56% {
+        border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+    }
+
+    70% {
+        border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+    }
+
+    84% {
+        border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+    }
+}

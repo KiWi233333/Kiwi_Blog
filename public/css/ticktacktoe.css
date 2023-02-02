@@ -1,0 +1,193 @@
+/* 内容 */
+.content {
+    background-color: var(--theme-color2);
+}
+
+.grid-container {
+    width: min(60vw, 300px);
+    height: min(60vw, 300px);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    backdrop-filter: blur(30px);
+    background-color: var(--boder-color);
+    border-radius: 1rem;
+
+}
+
+.grid-container .box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid var(--theme-color2);
+    border-spacing: 0;
+}
+
+.grid-container .box:nth-child(1),
+.grid-container .box:nth-child(4),
+.grid-container .box:nth-child(7) {
+    border-left: none;
+}
+
+.grid-container .box:nth-child(7),
+.grid-container .box:nth-child(8),
+.grid-container .box:nth-child(9) {
+    border-bottom: none;
+}
+
+.grid-container .box:nth-child(1),
+.grid-container .box:nth-child(2),
+.grid-container .box:nth-child(3) {
+    border-top: none;
+}
+
+.grid-container .box:nth-child(3),
+.grid-container .box:nth-child(6),
+.grid-container .box:nth-child(9) {
+    border-right: none;
+}
+
+.grid-container .box {
+    cursor: pointer;
+    animation-duration: 0.5s;
+}
+
+.grid-container .box .icon {
+    width: 80%;
+    height: 80%;
+}
+
+.grid-container .box .icon2 {
+    width: 60%;
+    height: 60%;
+}
+
+.title {
+    z-index: 1;
+}
+
+/* 背景渐变色 */
+.bg-banner {
+    position: absolute;
+    top: 20rem;
+    left: 35vw;
+    width: 40%;
+    aspect-ratio: 1;
+    border-radius: 40%;
+    background: radial-gradient(ellipse at 50% 50%,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0) 100%),
+        radial-gradient(ellipse at 70% 60%, #c3e060 0%, rgba(195, 224, 96, 0) 90%),
+        radial-gradient(ellipse at 30% 30%, #c3e060 0%, rgba(195, 224, 96, 0) 60%),
+        radial-gradient(ellipse at bottom left,
+            #00a3cb 0%,
+            rgba(0, 163, 203, 0) 70%),
+        linear-gradient(135deg,
+            rgba(18, 46, 119, 0) 0%,
+            rgba(18, 46, 119, 0) 75%,
+            #122e77 100%),
+        linear-gradient(to right,
+            #625793 0%,
+            #d55d64 35%,
+            #e49129 65%,
+            #c0671c 100%);
+    background-blend-mode: overlay, luminosity, color-dodge, saturation, screen,
+        color;
+    filter: blur(30px);
+    z-index: 0;
+}
+
+/* 成功提示框 */
+.alertCheck {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(152, 152, 152, 0.3);
+    display: none;
+}
+
+.alertCheck .box {
+    margin: auto;
+    width: min(60vw, 300px);
+    background-color: var(--theme-color);
+    border-radius: min(3vw, 1rem);
+}
+
+/* 按钮 */
+.btns .btn {
+    backdrop-filter: blur(10px);
+    background-color: var(--theme-color2);
+    color: var(--theme-color);
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    font-weight: 600;
+    box-shadow: none;
+    z-index: 1;
+}
+
+.btns .btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    transition: 0.5s;
+    background-color: var(--theme-color);
+    z-index: -1;
+}
+
+.btns .btn-restart:hover {
+    color: var(--theme-color2);
+}
+
+.btns .btn-restart:hover::after {
+    width: 100%;
+}
+
+/* 主题切换按钮 */
+.change-switch {
+    cursor: pointer;
+    position: absolute;
+    top: min(4vw, 3rem);
+    right: min(4vw, 3rem);
+    transition: 0.5s;
+    fill: var(--theme-color2);
+}
+
+.change-switch:hover {
+    transform: scale(1.15);
+}
+
+.backOut {
+    cursor: pointer;
+    position: absolute;
+    top: min(4vw, 3rem);
+    left: min(4vw, 3rem);
+    transition: 0.5s;
+    fill: var(--theme-color2);
+}
+
+/* 返回按钮 */
+.backOut:hover {
+    transform: scale(1.15);
+}
+
+.backOut:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--theme-color);
+}
