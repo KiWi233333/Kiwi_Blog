@@ -12,4 +12,4 @@ H5C3+js+jq+bootstrap5响应式博客简约静态网站
 
  [KIWI 博客](https://kiwi233333.github.io/Kiwi_Blog/](https://kiwi233333.github.io/Kiwi_Blog_while_simple/))
 
-![image](https://www.kiwi2333.top/wp-content/uploads/2023/02/blog.png)
+![image](http://fun.kiwi2333.top/public/image/kiwi_blog.png)
