@@ -10,6 +10,6 @@ H5C3+js+jq+bootstrap5响应式博客简约静态网站
 
 ### 体验
 
- [KIWI 博客](https://kiwi233333.github.io/Kiwi_Blog_while_simple/)
+ [KIWI 博客](https://kiwi233333.github.io/kiwi-blog-while-simple/)
 
 ![image](http://fun.kiwi2333.top/public/image/kiwi_blog.png)
