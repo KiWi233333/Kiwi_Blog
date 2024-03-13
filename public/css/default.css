@@ -4,7 +4,7 @@
     --theme-color2: #fff;
     --theme-font-color: #444444;
     --text-mark-color: #8acc1c;
-    --font-family: Helvetica;
+    --font-family: HFont;
     --boder-color: #555555;
     --box-shadow-color: #000;
     --text-mark-color2: #8d73ff;
@@ -13,12 +13,17 @@
     --text-mark-color5: #444444;
 } */
 
+
+@font-face {
+    font-family: HFont;
+    src: url('../font/HarmonyOS_Sans_SC_Regular.ttf');
+}
 /* 白天 */
 :root {
     --theme-color: #fff;
     --theme-color2: #1d1d1d;
     --text-mark-color: #73FFA0;
-    --font-family: Helvetica;
+    --font-family: HFont;
     --theme-font-color: #444444;
     --boder-color: #dfdfdf36;
     --box-shadow-color: #eee;
