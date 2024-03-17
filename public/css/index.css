@@ -31,7 +31,8 @@
 /* ct1左边 */
 .content1 {
     position: relative;
-    height: 90vh;
+    height: 85dvh;
+    height: 85vh;
 }
 
 .ct1-left {
